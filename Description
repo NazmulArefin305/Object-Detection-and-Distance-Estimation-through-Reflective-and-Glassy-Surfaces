@@ -1,0 +1,149 @@
+**Object Detection and Distance Estimation Using YOLO and Intel RealSense**
+
+This repository contains the complete implementation, dataset, outputs, and report for **CoE 595 Assignment 3**. The project focuses on training YOLO-based object detection models, performing real-time detection using an Intel RealSense camera, and estimating object distance using depth data.
+
+---
+
+## 📁 Repository Structure
+
+```
+CoE 595 Assignment 3
+│
+├── Code/
+│   ├── Assignment_3_Train_YOLO_Models.ipynb
+│   ├── Collect Distance from npy and Analysis Plot.ipynb
+│   ├── Realsense_Image_Capture.ipynb
+│   └── Realtime Detection.ipynb
+│
+├── Dataset/
+│   ├── Before annotation/
+│   ├── After annotation/
+│   │   └── ObjectBehindTheGlass.v3i.yolov11/
+│   ├── After annotation.zip
+│   └── ObjectBehindTheGlass.v3i.yolov11.zip
+│
+├── Output/
+│   ├── Error Plot/
+│   ├── Predicted Output/
+│   └── Realtime Output/
+│
+├── Trained Yolo11s Model/
+│
+└── Assignment 3 Report (202427100_202416760_202418400_202319170).docx
+```
+
+---
+
+## 🧠 Project Overview
+
+The goal of this project is to:
+
+* Train a **YOLOv11** object detection model on a custom dataset.
+* Detect objects **behind glass** using RGB images.
+* Estimate object distance using **depth data from an Intel RealSense camera**.
+* Perform **real-time object detection and distance estimation**.
+* Analyze distance prediction error and visualize results.
+
+---
+
+## 📓 Notebooks Description
+
+### 1. `Assignment_3_Train_YOLO_Models.ipynb`
+
+* Trains YOLOv11 models using the annotated dataset.
+* Handles dataset loading, training configuration, and model saving.
+
+### 2. `Realsense_Image_Capture.ipynb`
+
+* Captures RGB and depth images using an Intel RealSense camera.
+* Saves synchronized image and depth data for inference and analysis.
+
+### 3. `Realtime Detection.ipynb`
+
+* Performs real-time object detection using the trained YOLO model.
+* Estimates object distance from depth frames.
+* Displays live detection results.
+
+### 4. `Collect Distance from npy and Analysis Plot.ipynb`
+
+* Loads saved distance data (`.npy` files).
+* Computes error metrics.
+* Generates plots for distance estimation analysis.
+
+---
+
+## 📊 Dataset
+
+* **Before annotation**: Raw captured images.
+* **After annotation**: YOLO-formatted annotated dataset.
+* Dataset created and exported in **YOLOv11 format**.
+* Zipped versions are included for easy reuse.
+
+---
+
+## 📈 Outputs
+
+* **Error Plot**: Distance estimation error visualizations.
+* **Predicted Output**: YOLO detection results on test images.
+* **Realtime Output**: Screenshots or recordings from live detection.
+
+---
+
+## 🏋️ Trained Model
+
+* The trained **YOLOv11s model** is stored in:
+
+  ```
+  Trained Yolo11s Model/
+  ```
+* Can be directly loaded for inference or further fine-tuning.
+
+---
+
+## 📄 Report
+
+* `Assignment 3 Report (.docx)` contains:
+
+  * Problem statement
+  * Methodology
+  * Experimental setup
+  * Results and analysis
+  * Conclusion
+
+---
+
+## 🛠 Requirements
+
+* Python 3.x
+* YOLO (Ultralytics)
+* OpenCV
+* NumPy
+* Matplotlib
+* Intel RealSense SDK (`pyrealsense2`)
+* Jupyter Notebook
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   ```
+2. Install required dependencies.
+3. Start with dataset preparation and training:
+
+   * Run `Assignment_3_Train_YOLO_Models.ipynb`
+4. Perform inference:
+
+   * Use `Realtime Detection.ipynb` with a connected RealSense camera.
+
+---
+
+## 👥 Authors
+
+* 202427100
+* 202416760
+* 202418400
+* 202319170
